@@ -1,0 +1,7 @@
+Go to command prompt and execute. 
+g++ -std=c++11 "Hello World.cpp" -o helloworld.exe
+
+Exe files will not run in bash
+
+
+

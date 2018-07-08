@@ -1,0 +1,8 @@
+https://www.rparthiban.com/articles/wp-content/uploads/2018/05/Search-Algorithms-Part-1-Introduction.html
+https://www.rparthiban.com/articles/wp-content/uploads/2018/05/Search-Algorithms-Part-2-BFS.html
+https://www.rparthiban.com/articles/wp-content/uploads/2018/05/Search-Algorithms-Part-3-BFS-contd.html
+https://www.rparthiban.com/articles/wp-content/uploads/2018/05/Search-Algorithms-Part-4-DFS.html
+https://www.rparthiban.com/articles/wp-content/uploads/2018/05/Search-Algorithms-Part-5-UCS.html
+https://www.rparthiban.com/articles/wp-content/uploads/2018/05/Search-Algorithms-Part-6-AStar.html
+https://www.rparthiban.com/articles/wp-content/uploads/2018/05/Search-Algorithms-Part-7-AStar-contd.html
+https://www.rparthiban.com/articles/wp-content/uploads/2018/05/Search-Algorithms-Part-8-Networkx.html

@@ -1,0 +1,23 @@
+<iframe id="ipython_notebook_frame" style="height: 500px; width: 100%; padding: 0; border: none; box-shadow: none; -webkit-box-shadow: none;" src="https://www.rparthiban.com/articles/wp-content/uploads/2018/05/graphviz_2.html" width="350" height="150">
+</iframe>
+
+<script type="text/javascript">
+function resizeIframe(ifrm) {
+ifrm.style.height = ifrm.contentWindow.document.body.scrollHeight + 'px';
+// Setting the width here, or setting overflowX to "hidden" as above both
+// work for this page. It may be that one turns out to be better.
+ifrm.style.width = ifrm.contentWindow.document.body.scrollWidth + 'px';
+}
+function onLoad() {
+var ifrm = document.getElementById('ipython_notebook_frame');
+setTimeout(resizeIframe, 0, ifrm);
+}
+// By deleting and reinstating the iframe src, and by using setTimeout
+// rather than resizing directly we convince Safari to render the
+// page. See http://www.bitsofbits.com/wp-content/uploads/2015/01/custom.css
+var iframe = document.getElementById('ipython_notebook_frame');
+iframe.onload = onLoad;
+var iSrc = iframe.src;
+iframe.src = '';
+iframe.src = iSrc;
+</script>

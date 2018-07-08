@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+    <script type='text/javascript'>
+     google.charts.load('current', {
+       'packages': ['geochart'],
+       // Note: you will need to get a mapsApiKey for your project.
+       // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+       'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+     });
+     google.charts.setOnLoadCallback(drawMarkersMap);
+
+      function drawMarkersMap() {
+      var data = google.visualization.arrayToDataTable([
+        ['City'],
+        ['Arad'],
+        ['Sibiu'],
+        ['Zerind'],
+        ['Timișoara'],
+        ['Oradea'],
+        ['Fagaras'],
+        ['Lugoj'],
+        ['Rimnicu Vilcea'],
+        ['Mehadia'],
+        ['Drobeta'],
+        ['Craiova'],
+        ['Pitesti'],
+        ['Bucharest'],
+        ['Giurgiu'],
+        ['Urziceni'],
+        ['Vaslui'],
+        ['lasi'],
+        ['Neamt'],
+        ['Hirsova'],
+        ['Eforie'],
+      ]);
+
+      var options = {
+        region: 'RO', // Western Europe
+        resolution: 'provinces',
+        displayMode: 'markers'
+      };
+
+      var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    };
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+Udacity explains the kinematics of constant velocity and acceleration but does not derive kalman. 
+
+MVB explains kalman in detail, but does not touch upon kinematics derivations.
+https://www.youtube.com/watch?v=CaCcOwJPytQ&list=PLX2gX-ftPVXU3oUFNATxGXY90AULiqnWT
+
+
+Links below could help connect them both:
+
+1D kinematics: Constant acceleration: 
+https://www.youtube.com/watch?v=l02M678tJu4
+
+This explains for constant acceleration, why area of triangle becomes the displacement
+https://www.khanacademy.org/science/physics/one-dimensional-motion/acceleration-tutorial/v/why-distance-is-area-under-velocity-time-line
+
+Area of traingle is summation of indivituals rectangles inside it..
+https://www.youtube.com/watch?v=X-MVjALEAN4
+
+Simple fluid motion using kalman filter:
+http://www.ijera.com/papers/Vol6_issue8/Part-%201/C0608011216.pdf
+
+Derivative of power function (to prove where that 1/2 comes for integration)
+https://mathinsight.org/derivative_power_function
+
+Riemann Sum which is key to deriving area of triangle from summation to integral
+https://www.khanacademy.org/math/ap-calculus-ab/ab-accumulation-riemann-sums/ab-defining-definite-integral/v/riemann-sums-and-integrals
+
+A good kalman filter book (read when time permits)
+https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python
+
+
+
+Understand basics of variance and co variance:
+https://www.youtube.com/watch?v=E4HAYd0QnRc
+https://www.youtube.com/watch?v=35NWFr53cgA

@@ -1,0 +1,17 @@
+For div.output_subarea
+
+Replace 
+
+max-width: calc(100% - 14ex);
+
+with 
+
+max-width: 100%;
+
+
+In wordpress:
+
+.site-branding
+{
+display:none;
+}

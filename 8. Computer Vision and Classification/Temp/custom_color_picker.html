@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://bgrins.github.com/spectrum/spectrum.css">
+  <script type="text/javascript" src="http://bgrins.github.com/spectrum/spectrum.js"></script>
+  <style type="text/css">
+    .full-spectrum .sp-palette {
+        max-width: 400px;
+        }
+    .sp-picker-container
+    {
+        width:600px;
+    }
+    h3
+    {
+        display:inline;
+    }
+    #convertedHSV
+    {
+        font-size:25px;
+        display:inline;
+    }
+    .sp-dragger 
+    {
+        border-radius: 10px;
+        height: 10px;
+        width: 10px;
+    }    
+
+  </style>
+  <title>Spectrum From Master by bgrins</title>  
+</head>
+
+<body>    
+    
+    <h2>openCV HSV tool</h2>
+    <input type='text' id="flat" />
+    <br>
+    <h3>openCV compatable HSV:&nbsp;&nbsp;&nbsp;&nbsp;</h3><p id='convertedHSV'></p>
+    <em id='basic-log'></em>
+    <div><p>Below formats are accepted inputs</p>
+        <pre>
+                red
+                #fff
+                fff
+                #ffffff
+                ffffff
+                rgb(255, 0, 0)
+                rgb 255 0 0
+                hsl(0, 100, 50)
+                hsl(0, 100%, 50%)
+                hsl 0 100 50
+                hsl 0 100% 50%
+                hsv(0, 100%, 100%)
+                hsv(0, 100, 100)
+                hsv 0 100% 100%
+                hsv 0 100 100
+        </pre>
+    </div>
+    <div><p>Thank you: <a href="https://bgrins.github.io/spectrum/">Spectrum API</a></p></div>
+    <script type="text/javascript">
+
+    $("#flat").spectrum({
+        flat: true,
+        showInput: true,
+        change: function() 
+        { 
+            console.log('I came here via change handler');  
+            updateHSV();
+        },        
+        move: function() 
+        { 
+            console.log('I came here via move handler');  
+            updateHSV();
+        }
+    });
+
+    function updateHSV()
+    {
+        //console.log('I came here via move handler');        
+        //current_hsv = $(".sp-input").val();
+        var t = $("#flat").spectrum("get");            
+        current_hsv = t.toHsvString();
+        current_hsv = current_hsv.substring(
+            current_hsv.lastIndexOf("(") + 1, 
+            current_hsv.lastIndexOf(")")
+            );
+        values = current_hsv.split(',');
+        H = parseInt(values[0])/2;
+        S = parseInt(values[1])*255/100;
+        V = parseInt(values[2])*255/100;
+        $("#convertedHSV").html(H + '  ,  ' + S + '  ,  ' + V);
+    }
+    </script>
+</body>
+</html>
+

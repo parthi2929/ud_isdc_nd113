@@ -1,0 +1,17 @@
+1. Avoid Extra if Statements  (take most run case first, reduce if logically)
+2. Avoid Nested for Loops (try m+n instead of m*n ops)
+3. Avoid Creating Extra Variables
+4. Reserve Space in Memory for Vectors  (myvector.reserve(vector_size);)
+5. Passing Variables by Reference  (for vectors just add & in function definition and declaration)
+6. Using Static
+
+Project. Optimize order:
+zeros.cpp
+initialize_beliefs.cpp
+sense.cpp
+blur.cpp
+normalize.cpp
+move.cpp
+
+
+

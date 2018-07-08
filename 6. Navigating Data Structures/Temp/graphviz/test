@@ -1,0 +1,7 @@
+digraph {
+	node [shape=record width=0.4]
+	rankdir=LR
+	current [label=B fillcolor="#3fff42" style=filled]
+	stack:f2 -> current
+	stack [label="{ <f0> C |<f1> P |<f2> M }" fillcolor="#eabc77" style=filled]
+}
