@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+
+{%- block htmltitle %}
+<title>my ud_st101</title>
+{%- endblock %}
+
+<!-- {% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ base_url }}/css/nbheader_styles_MOD.css" type="text/css" />
+{% endblock %} -->
+
+
+{%- block extrahead %} 
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+<!-- MathJax configuration -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true,
+        processEnvironments: true
+    },
+    // Center justify equations in code and markdown cells. Elsewhere
+    // we use CSS to left justify single line equations in code cells.
+    displayAlign: 'center',
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}},
+        linebreaks: { automatic: true }
+    }
+});
+</script>
+<!-- End of mathjax configuration -->
+
+
+{% endblock %}
+
+{#
+The entry point for the ReadTheDocs Theme.
+ 
+Any theme customisations should override this file to redefine blocks defined in
+the various templates. The custom theme should only need to define a main.html
+which `{% extends "base.html" %}` and defines various blocks which will replace
+the blocks defined in base.html and its included child templates.
+#}
